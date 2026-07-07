@@ -27,7 +27,6 @@ This project aims to introduce the fundamental building blocks of system adminis
 ---
 
 ## Instructions
-This section contains the exact evaluation commands structured chronologically according to the 42 Born2beroot review sheet and evaluation guidelines. Run these commands during your defense when requested by your evaluator.
 
 ### 1. Simple Setup & Service Verification
 * **Check that no Graphical Interface is running:**
@@ -38,11 +37,11 @@ This section contains the exact evaluation commands structured chronologically a
   ```
 * **Check AppArmor Status:**
   ```bash
-  sudo aa-status
+  sudo systemctl status apparmor
   ```
 * **Check UFW Status:**
   ```bash
-  sudo ufw status
+  sudo systemctl status ufw
   ```
 * **Check SSH Service Status:**
   ```bash
@@ -60,7 +59,7 @@ This section contains the exact evaluation commands structured chronologically a
   ```
 * **Create a new group named**
   ```bash
-  sudo groupadd new_group
+  sudo addgroup new_group
   ```
 * **Assign a user to a group:**
   ```bash
