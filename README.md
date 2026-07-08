@@ -16,7 +16,8 @@ This project aims to introduce the fundamental building blocks of system adminis
 | **Package Manager** | **apt:** High-level package management tool, user-friendly output, standard for Debian-based systems. | **aptitude:** More advanced, includes a text-based user interface (TUI), better at resolving complex dependency conflicts. |
 | **Security Framework** | **AppArmor:** Path-based Access Control. Easier to configure, uses profiles bound to specific program paths to restrict system capabilities. | **SELinux:** Label-based Mandatory Access Control (MAC). Highly granular but extremely complex, assigning security contexts to every file and process. |
 | **Firewall** | **UFW:** Uncomplicated Firewall. A user-friendly front-end for iptables/nftables, straightforward syntax for standard rule-making. | **firewalld:** Zone-based dynamic firewall daemon, supports advanced network environments and stateful rules. |
-| **Hypervisor** | **VirtualBox:** Type-2 hypervisor, open-source, highly cross-platform, natively supports easy port forwarding layouts. | **UTM:** Apple Silicon (M1/M2/M3) optimized hypervisor based on QEMU, efficient for macOS users but lacks VirtualBox UI consistency. |
+
+---
 
 ### 3. Design Choices & Security Policies
 * **Partitioning:** Configured encrypted partitions utilizing LVM to safeguard data at rest.　Established a clean, minimal layout featuring a dedicated root (`/`) volume and a dynamic `[SWAP]` allocation inside the encrypted physical volume (`sda5_crypt`), fully satisfying the project's strict mandatory security architecture specifications.
