@@ -62,7 +62,7 @@ This project aims to introduce the fundamental building blocks of system adminis
 
 * **Verify Aging Policy Application on Users:**
   ```bash
-  sudo chage -l tsadamor
+  sudo chage -l user 
   ```
 * **Verify your login user exists and check its groups**
   ```bash
