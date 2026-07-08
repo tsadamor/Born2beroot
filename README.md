@@ -49,7 +49,21 @@ This project aims to introduce the fundamental building blocks of system adminis
   sudo systemctl status ssh
   ```
 
-### 2. User & Group Management
+### 2. Password Policy & User Management
+* **Check Password Complexity Policy (PAM):**
+  ```bash
+  sudo cat /etc/pam.d/common-password
+  ```
+
+* **Check Password Aging Policy:**
+  ```bash
+  sudo cat /etc/login.defs
+  ```
+
+* **Verify Aging Policy Application on Users:**
+  ```bash
+  sudo chage -l tsadamor
+  ```
 * **Verify your login user exists and check its groups**
   ```bash
   id user
@@ -101,9 +115,9 @@ This project aims to introduce the fundamental building blocks of system adminis
   ```
 * **Show the strict sudo rule file implementation:**
   ```bash
-  sudo cat /etc/sudoers.d/sudo_config
-  # Or alternatively check via visudo
   sudo visudo
+  # Or alternatively check via visudo
+  sudo cat /etc/sudoers.d/sudo_config
   ```
 * **Verify that the sudo log directory exists and contains active log entries:**
   ```bash
